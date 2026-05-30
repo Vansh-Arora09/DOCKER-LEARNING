@@ -1,35 +1,77 @@
-# 🐳 Mastering Docker: From Basics to Advanced Workflows
+# 🐳 Mastering DevOps: Virtualization, Containerization & CI/CD Pipelines
 
-> "Ship faster. Run anywhere."
+<div align="center">
 
-Welcome to **DOCKER-LEARNING**. This repository is a comprehensive, hands-on guide documented during my deep dive into containerization. From fundamental architecture to complex networking and registry management, this repo tracks the evolution of a modern DevOps workflow.
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
----
+> **"Ship faster. Run anywhere. Automate completely."** > A comprehensive, production-grade laboratory ledger tracing the evolution of modern cloud-native workflows.
 
-## 🚀 Repository Overview
-This project is structured into modular units, each focusing on a core pillar of the Docker ecosystem.
+[📁 Explore Units](#-repository-architecture--syllabus-mapping) • [🚀 Command Playground](#-production-ready-command-playground) • [🤝 Connect](#-author--professional-network)
 
-### 📂 [UNIT 1] - The Foundations
-* **Core Architecture:** Understanding the Docker Engine, Images, and Containers.
-* **Interactive Environments:** Mastering the `-it`, `-e`, and `-v` flags for dynamic container control.
-* **Process Management:** Handling container lifecycles and resource allocation.
-
-### 📂 [UNIT 2] - Advanced Operations & Networking
-* **Custom Image Creation:** Deep dive into writing optimized Dockerfiles.
-* **Docker Networking:** Understanding Bridge, Host, and Overlay networks.
-* **DNS Inside Docker:** Mastering service discovery and internal name resolution.
-* **Registry Mastery (GHCR):** Authenticating with GitHub Container Registry and managing access tokens.
-* **History & Inspection:** Using `docker history` and `inspect` to audit image layers.
+</div>
 
 ---
 
-## ⚡ Quick Start Command Reference
-Example of a multi-parameter container run mastered in this repo:
+## 🎯 Repository Mission & Overview
 
+Welcome to **DOCKER-LEARNING**. This repository serves as an end-to-end engineered record of modern DevOps methodologies spanning **OS-Level Virtualization**, **Microservices Orchestration**, **Build Automation**, and **Continuous Integration (CI/CD)** engines. 
+
+This space tracks theoretical milestones alongside practical shell checkpoints, custom docker scripts, and live automation pipelines, organized cleanly by academic units.
+
+---
+
+## 📂 Repository Architecture & Syllabus Mapping
+
+The workspace is cleanly divided into 6 fundamental core units. Navigate into any unit folder to view standalone `README.md` technical specs, logs, and laboratory screenshots.
+
+### 🏗️ Part 1: Virtualization & Container Mechanics
+
+| Unit Link | Module Name | Core Engineering Focus & Deliverables |
+| :--- | :--- | :--- |
+| [**`📁 Unit_01`**](./Unit_01) | **Basics of DevOps Infrastructure** | Linux kernel mechanics, Namespaces process isolation, Control Groups (`cgroups`) resource limits, and Docker Engine CLI basics. |
+| [**`📁 Unit_02`**](./Unit_02) | **Image Building & Management** | Writing optimized custom `Dockerfiles`, multi-layer filesystem structures, bridge networking, host port mapping, and volume storage persistence. |
+| [**`📁 Unit_03`**](./Unit_03) | **Microservices with Docker Compose** | Monolith decomposition architectures, multi-container YAML schemes, `build` vs `image` environments, and service initialization dependencies (`depends_on`). |
+
+### 🚀 Part 2: Enterprise Build Automation & CI/CD Pipelines
+
+| Unit Link | Module Name | Core Engineering Focus & Deliverables |
+| :--- | :--- | :--- |
+| [**`📁 Unit_04`**](./Unit_04) | **Maven Build Automation** | Project Object Model (`pom.xml`) lifecycles, transitive dependency mapping, `mvnw` wrapper setups, and automated application containerization. |
+| [**`📁 Unit_05`**](./Unit_05) | **Continuous Integration with GitHub Actions** | Event-driven cloud workflows, declarative YAML runner matrices, dependency build caching, and automated image publishing to Docker Hub/GHCR. |
+| [**`📁 Unit_06`**](./Unit_06) | **CI/CD with Jenkins** | Distributed Controller-Agent nodes, Pipeline-as-Code setups via `Jenkinsfile`, GitHub webhooks automation, and production deployment flows. |
+
+---
+
+## ⚡ Production-Ready Command Playground
+
+Examples of the complex multi-parameter configurations implemented and mastered throughout this repository:
+
+### 🐳 1. Dynamic Container Provisioning with Storage & Network Isolation
 ```bash
-docker run -it --name my_app -e APP_ENV=production -v /app/data:/data ubuntu
+docker run -d \
+  --name scalable-api-runtime \
+  --network custom-isolated-bridge \
+  -p 8080:80 \
+  -e APP_ENV=production \
+  -v persistence_volume:/app/data \
+  --memory="512m" --cpus="1.0" \
+  ubuntu:latest
+```
+### 📦 2. Executing Standardized Build Lifecycle Streams
+```bash
+# Compile, run unit tests, and package application bypassing localized Maven variations
+./mvnw clean package
+```
+### 🛠️ 3. Containerized Runtime Interrogation
+```bash
+# Audit immutable historical file layer footprints inside custom built images
+docker history my-custom-app:latest
 
-🤝 Let's Connect
-Author: Vansh Arora
+# Extract raw network metadata configurations and environment parameters
+docker inspect scalable-api-runtime
+```
 
-Topic: Containerization & DevOps Strategy
